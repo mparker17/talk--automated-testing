@@ -1,7 +1,8 @@
 title: Automated testing with mparker17
 baseurl: "/talk--automated-testing"
 url: "https://mparker17.github.io"
-markdown: kramdown
+markdown: CommonMarkGhPages
 remote_theme: mparker17/jekyll-theme--revealjs
 plugins:
+  - jekyll-commonmark-ghpages
   - jekyll-remote-theme
