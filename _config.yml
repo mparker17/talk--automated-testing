@@ -6,6 +6,7 @@ remote_theme: mparker17/jekyll-theme--revealjs@master
 plugins:
   - jekyll-commonmark-ghpages
   - jekyll-remote-theme
+  - jekyll-relative-links
 defaults:
   -
     scope:
