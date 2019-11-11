@@ -4,7 +4,7 @@ A presentation on automated testing.
 
 # Use
 
-1. Open https://mparker17.github.io/talk--automated-testing/ in a vaguely modern web browser.
+1. Open https://mparker17.github.io/talk--software-testing-overview/ in a vaguely modern web browser.
 2. Choose either "Slides" or "Speaker notes"
 
 Note this loads [reveal.js](https://github.com/hakimel/reveal.js) on [CloudFlare's cdnjs](https://cdnjs.com/about), so you have to be connected to the internet when you load the slideshow for the first time. [Technical information is available on cdnjs's page about reveal.js](https://cdnjs.com/libraries/reveal.js).

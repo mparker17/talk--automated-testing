@@ -1,5 +1,5 @@
 title: Automated testing with mparker17
-baseurl: "/talk--automated-testing"
+baseurl: "/talk--software-testing-overview"
 url: "https://mparker17.github.io"
 markdown: CommonMarkGhPages
 remote_theme: mparker17/jekyll-theme--revealjs@master

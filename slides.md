@@ -7,7 +7,7 @@ title: Automated testing - slides
 # Automated testing
 — with [mparker17][mparker17-drupalorg]
 
-Follow along at [mparker17.github.io/talk--automated-testing](index.md)
+Follow along at [mparker17.github.io/talk--software-testing-overview](index.md)
 
 </section>
 <section>
