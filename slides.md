@@ -123,11 +123,6 @@ inspirational and valuable
 
 </section>
 </section>
-<section>
-
-## Automated testing with Gitlab CI and Pantheon
-
-</section>
 
 [mparker17-drupalorg]: https://www.drupal.org/u/mparker17
 [mparker17-github]: https://github.com/mparker17
