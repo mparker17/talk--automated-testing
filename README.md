@@ -1,6 +1,6 @@
-# Automated testing
+# Software testing overview
 
-A presentation on automated testing.
+A short presentation on software testing.
 
 # Use
 

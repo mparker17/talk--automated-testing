@@ -1,10 +1,10 @@
 ---
-title: Automated testing - landing page
+title: Software testing overview - landing page
 ---
 
 <section>
 
-# Automated testing
+# Software testing overview
 — with mparker17
 
 <small>Software testing, both manual and automated, has lots of buzzwords, flavours, and types. This presentation will give an overview of the terms associated with testing software.</small>

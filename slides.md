@@ -1,10 +1,10 @@
 ---
-title: Automated testing - slides
+title: Software testing overview - slides
 ---
 
 <section>
 
-# Automated testing
+# Software testing overview
 — with [mparker17][mparker17-drupalorg]
 
 Follow along at [mparker17.github.io/talk--software-testing-overview](index.md)
@@ -24,7 +24,7 @@ Follow along at [mparker17.github.io/talk--software-testing-overview](index.md)
 <section>
 <section>
 
-## Types of automated testing
+## Types of software testing
 
 <small>In my opinion there are 5 types...</small>
 

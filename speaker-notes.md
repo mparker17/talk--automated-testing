@@ -1,10 +1,10 @@
 ---
-title: Automated testing - speaker notes
+title: Software testing overview - speaker notes
 ---
 
 <section>
 
-# Automated testing
+# Software testing overview
 — with mparker17
 
 Speaker notes
