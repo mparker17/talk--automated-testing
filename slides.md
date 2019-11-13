@@ -7,7 +7,7 @@ title: Software testing overview - slides
 # Software testing overview
 — with [mparker17][mparker17-drupalorg]
 
-Follow along at [mparker17.github.io/talk--software-testing-overview](index.md)
+<small>Follow along at [mparker17.github.io/talk--software-testing-overview](index.md)</small>
 
 </section>
 <section>
