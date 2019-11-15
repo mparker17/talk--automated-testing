@@ -197,3 +197,14 @@ inspirational and valuable
 </section>
 </section>
 
+<section>
+
+# Thanks!
+
+Works cited:
+
+1. Beck, Test Driven Development By Example, Addison-Wesley, 2003. p.123
+2. Martin, Clean Architecture, Prentice Hall, 2018. p.26
+3. Martin, The Clean Coder, Prentice Hall, 2011. p.114
+
+</section>
