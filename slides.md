@@ -46,6 +46,26 @@ I am an [Acquia Certified Drupal Developer][acquia-cert]
 <section>
 <section>
 
+## Why test?
+
+* Our customers and employers pay for software that works correctly.
+* Tests give us confidence that our system works correctly.
+
+</section>
+<section>
+
+### Tests tell us that...
+
+* our system does what it is intended to do,
+* changes have not broken existing functionality,
+* our system can handle edge-cases.
+
+</section>
+</section>
+
+<section>
+<section>
+
 ## Dictionary definitions
 
 <div class="fragment fade-in-then-semi-out">
@@ -73,26 +93,6 @@ A procedure leading to acceptance or rejection<sup>1</sup> [of a system's correc
 </section>
 <section>
 
-# Why test?
-
-* Our customers and employers pay for software that works correctly.
-* Tests give us confidence that our system works correctly.
-
-</section>
-<section>
-
-# Tests tell us that...
-
-* our system does what it is intended to do,
-* changes have not broken existing functionality,
-* our system can handle edge-cases.
-
-</section>
-</section>
-
-<section>
-<section>
-
 ## Varieties of software testing
 
 1. Manual tests (get a person to test)
@@ -106,6 +106,8 @@ We want to automate as many tests as possible to save time and money, but it's n
 </div>
 
 </section>
+</section>
+<section>
 <section>
 
 ## Types of software testing
@@ -116,9 +118,6 @@ We want to automate as many tests as possible to save time and money, but it's n
 4. Component tests
 5. Unit tests
 
-</section>
-<section>
-<img src="assets/images/2019-11-14--test-automaton-pyramid--overview--color.svg" alt="" style="margin: 0; padding: 0;"/>
 </section>
 <section>
 
@@ -135,67 +134,190 @@ In an ideal world...
 
 </section>
 <section>
+<img src="assets/images/2019-11-14--test-automaton-pyramid--overview--color.svg" alt="" style="margin: 0; padding: 0;"/>
+</section>
+</section>
 
-**Unit** ▸ Component ▸ Integration ▸ System ▸ Exploratory
 
-* **What?** White-box tests to cover edge cases, code branches
-* **Covers?** Code paths, individual components (functions)
-* **How?** Test parameters, pre/post conditions, state changes, output. Mock dependencies.
-* **Who writes?** Developer
-* **When?** *Ideally* Before function code; *Last chance* Before commit
-* **Key tech:** xUnit, mock objects (PHPUnit, RSpec, QUnit, Jasmine, Unit.js, Hamcrest)
+<section>
+<section>
+
+## Other terms
+
+1. **Regression tests** check that new changes haven't broken old work.
+    * Unit, Component, Integration, and System tests can all act as regression tests.
+    * You probably want to automate as many as you can to avoid a massive, time-consuming stack of manual tests to run after every change.
+2. **Acceptance tests** check that the work meets the requirements of a specification or contract.
+    * Unit, Component, Integration, and System tests can all act as acceptance tests.
+    * These don't have to be automated.
 
 </section>
 <section>
 
-Unit ▸ **Component** ▸ Integration ▸ System ▸ Exploratory
+## Other terms (ctd.)
 
-* **What?** Grey-box tests to cover interactions between objects/interfaces
-* **Covers?** Success/failure states, component interactions.
-* **How?** Test subsystem inputs/outputs. Mock dependencies, shared resources, and IPC
-* **Who writes?** Developer
-* **When?** *Ideally* Before object code; *Last chance* Before merging feature-branch (while building).
-* **Key tech:** xUnit, mock objects
+3. **Test Driven Development** (TDD) — write tests *before* writing code to meet those tests
+    * Unit and Component tests (and some System tests) can often be written first as per TDD
+    * Benefits include certainty (that a change didn't break anything), defect reduction, courage (to make changes), documentation (by test), and (better) design<sup>4</sup>
+    * Uncle Bob (Robert C. Martin) says the high cycle time stimulates productivity and reminds him of programming games as a kid<sup>5</sup>
 
 </section>
 <section>
 
-Unit ▸ Component ▸ **Integration** ▸ System ▸ Exploratory
+## Other terms (ctd.)
 
-* **What?** Black-box tests to cover user paths through the system
-* **Covers?** Functions correctly, can complete tasks, meets client's requirements
-* **How?** Look at user story/ticket, write steps to complete
-* **Who writes?** PO/Client/Tester/Developer
-* **When?** *Ideally* Before UI; *Last chance* Before merging feature branch
-* **Key tech:** Gherkin, SimpleTest, manual tests (Quail, Behat, Selenium; a11y/browser tests)
+4. **Test suite** — a bunch of tests
+    * Unit, Component, Integration, and System tests could all be in the same suite
+    * You probably only want to run the *whole test suite* (i.e.: every single test) once a day; for smaller tasks, you might want to run a smaller test suite
+5. **Test coverage** — how much of your application has tests to verify its behaviour
+6. 
+
+<section>
+<section>
+
+## Unit tests
+
+* **What?** highly-isolated, low-level, clear-box tests
+* **Covers?** code paths and edge cases for small units and small group interactions
+* **Who?** by developer for developer; in language of <abbr title="System Under Test">SUT</abbr>
+* **Synonyms**
+    * individual units — (couldn't find any)
+    * unit groups — interaction, integration; integration & testing (I&T)
 
 </section>
 <section>
 
-Unit ▸ Component ▸ Integration ▸ **System** ▸ Exploratory
+### Unit tests (ctd.)
 
-* **What?** Black-box tests to cover the system as a whole and catch regressions
-* **Covers?** The system as a whole
-* **How?** Regression, performance, load/stress/volume, compatibility, recovery tests
-* **Who writes?** Tester/Developer/PO
-* **When?** After integrating code, before demo
-* **Key tech:** Continuous integration tools, manual tests (New Relic)
+* **When do I write them?**
+    * Ideally — Before writing code
+    * Last chance — Before <abbr title="Version Control System">VCS</abbr> commit
+* **When do I run them?**
+    1. Run the ones for the component you're working on as you are developing
+    2. Run the whole test suite before VCS commit
+    3. Run the whole test suite after merging
 
 </section>
 <section>
 
-Unit ▸ Component ▸ Integration ▸ System ▸ **Exploratory**
+### Unit tests (ctd.)
 
-* **What?** Black-box tests to determine if the proposed UI is useful, usable, aesthetic, identifiable,
-inspirational and valuable
-* **Covers?** End-user experience
-* **How?** Present design to users, gather data on how they experience it
-* **Who writes?** Designer/UX expert
-* **When?** *Ideally* After 1st design proposal; *Last chance* Before finalizing design, after release
-* **Key tech:** Visual diff tools, A/B testing frameworks, observation (Quail, Acquia Lift, PhantomJS, Selenium)
+* **Key tech**
+    * PHP — [PHPUnit][phpunit], [php-hamcrest][php-hamcrest]
+    * JavaScript — [Jest][jest] / [Jasmine][jasmine], [Mocha][mocha], [Ava][ava], [Unexpected][unexpectedjs] (previously QUnit, Unit.js)<sup>6</sup>
+* **How-to/Patterns**:
+    * **Manipulate** parameters and pre-/post-conditions with *fixtures*, and *parameterized tests (PUTs)*
+    * **Verify** output and state changes with *assertions*, and *pattern matchers*
+    * **Isolate** with *test doubles* (mocks, stubs, fakes, harnesses)
+
+[phpunit]: https://phpunit.de
+[php-hamcrest]: https://github.com/hamcrest/hamcrest-php
+[jest]: https://jestjs.io
+[jasmine]: https://jasmine.github.io
+[mocha]: https://mochajs.org
+[ava]: https://github.com/avajs/ava
+[unexpectedjs]: https://unexpected.js.org/
 
 </section>
 </section>
+
+
+<section>
+<section>
+
+## Component tests
+
+* **What?** mid/high-level, grey-box tests
+* **Covers?** happy-path for features and business rules (also obvious corner/alternate paths)
+* **Who?** by <abbr title="Quality Assurance">QA</abbr> & business, for business; often in a behavioral <abbr title="Domain Specific Language">DSL</abbr>
+* **When?** Ideally — Before feature is built<br />Last chance — Before merging feature
+* **Synonyms** behaviour, confidence, validation; verification & validation (V&V)
+
+</section>
+<section>
+
+### Component tests (ctd.)
+
+* **Key tech**
+    * The [Gherkin][gherkin] DSL
+    * PHP — [Behat][behat]
+    * JavaScript — [cucumber-js][cucumberjs], [Chai][chai]<sup>6</sup>
+* **How-to/Patterns**
+    * TODO
+
+[gherkin]: https://cucumber.io/docs/gherkin/reference/
+[cucumber]: https://cucumber.io
+[behat]: https://behat.org
+[cucumberjs]: https://github.com/cucumber/cucumber-js
+[chai]: https://www.chaijs.com
+
+</section>
+</section>
+
+
+<section>
+<section>
+
+## Integration tests
+
+* **What?** 
+* **Covers?** 
+* **Who?** 
+* **When?** 
+* **Synonyms** 
+
+</section>
+<section>
+
+### Integration tests (ctd.)
+
+</section>
+</section>
+<section>
+<section>
+
+## System tests
+
+* **What?** 
+* **Covers?** 
+* **Who?** 
+* **When?** 
+* **Synonyms** 
+
+</section>
+<section>
+
+### System tests (ctd.)
+
+* **Key tech**
+* **How-to/Patterns**
+
+</section>
+</section>
+
+
+<section>
+<section>
+
+## Exploratory tests
+
+* **What?** 
+* **Covers?** 
+* **Who?** 
+* **When?** 
+* **Synonyms** 
+
+</section>
+<section>
+
+### Exploratory tests (ctd.)
+
+* **Key tech**
+* **How-to/Patterns**
+
+</section>
+</section>
+
 
 <section>
 
@@ -206,5 +328,8 @@ Works cited:
 1. Beck, Test Driven Development By Example, Addison-Wesley, 2003. p.123
 2. Martin, Clean Architecture, Prentice Hall, 2018. p.26
 3. Martin, The Clean Coder, Prentice Hall, 2011. p.114
+4. Martin, The Clean Coder, Prentice Hall, 2011. p.80-83
+5. Martin, The Clean Coder, Prentice Hall, 2011. p.78
+6. [Zaidman, An Overview of JavaScript Testing in 2019, WellDone Software / Medium, Feb. 2019.](https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2019-264e19514d0a)
 
 </section>
