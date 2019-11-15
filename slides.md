@@ -52,21 +52,21 @@ I am an [Acquia Certified Drupal Developer][acquia-cert]
 
 **Testing (verb)**
 
-* To evaluate<sup>1</sup> [a system for correctness]
+To evaluate<sup>1</sup> [a system for correctness]
 
 </div>
 <div class="fragment fade-in-then-semi-out">
 
 **A test (noun)**
 
-* A procedure leading to acceptance or rejection<sup>1</sup> [of a system's correctness]
+A procedure leading to acceptance or rejection<sup>1</sup> [of a system's correctness]
 
 </div>
 <div class="fragment fade-in-then-semi-out">
 
 **But keep in mind...**
 
-* "Testing only shows the presence, not the absence, of bugs" — Edsger W. Dykstra<sup>2</sup>
+"Testing only shows the presence, not the absence, of bugs" — Edsger W. Dykstra<sup>2</sup>
 
 </div>
 
