@@ -110,24 +110,23 @@ We want to automate as many tests as possible to save time and money, but it's n
 
 ## Types of software testing
 
-<small>In my opinion there are 5 types...</small>
-
-1. Unit tests
-2. Interaction tests
-3. Acceptance tests
-4. System tests
-5. Refinement tests
-
-<small>...but be aware that not everyone agrees. Mine are roughly broken up by tool.</small>
+1. Exploratory tests
+2. System tests
+3. Integration tests
+4. Component tests
+5. Unit tests
 
 </section>
 <section>
+<img src="assets/images/2019-11-14--test-automaton-pyramid--overview--color.svg" alt="" style="margin: 0; padding: 0;"/>
+</section>
+<section>
 
-Unit ▸ Interaction ▸ Acceptance ▸ System ▸ Refinement
+Unit ▸ Component ▸ Integration ▸ System ▸ Exploratory
 
 In an ideal world...
 
-| Unit tests         | Refinement tests       |
+| Unit tests         | Exploratory tests      |
 | ------------------ | ---------------------- |
 | have Small scope   | have Large scope       |
 | are Fast to run    | are Slow to run        |
@@ -137,9 +136,7 @@ In an ideal world...
 </section>
 <section>
 
-**Unit** ▸ Interaction ▸ Acceptance ▸ System ▸ Refinement
-
-<small>a.k.a. component tests</small>
+**Unit** ▸ Component ▸ Integration ▸ System ▸ Exploratory
 
 * **What?** White-box tests to cover edge cases, code branches
 * **Covers?** Code paths, individual components (functions)
@@ -151,9 +148,7 @@ In an ideal world...
 </section>
 <section>
 
-Unit ▸ **Interaction** ▸ Acceptance ▸ System ▸ Refinement
-
-<small>a.k.a. integration and testing, I&T</small>
+Unit ▸ **Component** ▸ Integration ▸ System ▸ Exploratory
 
 * **What?** Grey-box tests to cover interactions between objects/interfaces
 * **Covers?** Success/failure states, component interactions.
@@ -165,9 +160,7 @@ Unit ▸ **Interaction** ▸ Acceptance ▸ System ▸ Refinement
 </section>
 <section>
 
-Unit ▸ Interaction ▸ **Acceptance** ▸ System ▸ Refinement
-
-<small>a.k.a. conformance tests, behaviour tests, functional tests, UAT, validation testing</small>
+Unit ▸ Component ▸ **Integration** ▸ System ▸ Exploratory
 
 * **What?** Black-box tests to cover user paths through the system
 * **Covers?** Functions correctly, can complete tasks, meets client's requirements
@@ -179,9 +172,7 @@ Unit ▸ Interaction ▸ **Acceptance** ▸ System ▸ Refinement
 </section>
 <section>
 
-Unit ▸ Interaction ▸ Acceptance ▸ **System** ▸ Refinement
-
-<small>a.k.a. end-user tests, field tests, regression tests</small>
+Unit ▸ Component ▸ Integration ▸ **System** ▸ Exploratory
 
 * **What?** Black-box tests to cover the system as a whole and catch regressions
 * **Covers?** The system as a whole
@@ -193,9 +184,7 @@ Unit ▸ Interaction ▸ Acceptance ▸ **System** ▸ Refinement
 </section>
 <section>
 
-Unit ▸ Interaction ▸ Acceptance ▸ System ▸ **Refinement**
-
-<small>a.k.a. UX tests, usability tests, business-value tests, ROI tests, end-user tests, field tests</small>
+Unit ▸ Component ▸ Integration ▸ System ▸ **Exploratory**
 
 * **What?** Black-box tests to determine if the proposed UI is useful, usable, aesthetic, identifiable,
 inspirational and valuable
