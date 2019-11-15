@@ -10,7 +10,10 @@ title: Software testing overview - slides
 <small>Follow along at [mparker17.github.io/talk--software-testing-overview](index.md)</small>
 
 [mparker17-drupalorg]: https://www.drupal.org/u/mparker17
+
 </section>
+
+<section>
 <section>
 
 ## Who am I?
@@ -33,8 +36,73 @@ title: Software testing overview - slides
 [myplanet]: https://www.myplanet.com
 [openconcept]: https://openconcept.ca
 [acquia-cert]: https://certification.acquia.com/user/843258
+
+</section>
+</section>
+
+<section>
+<section>
+
+## Dictionary definitions
+
+<div class="fragment fade-in-then-semi-out">
+
+**Testing (verb)**
+
+* To evaluate<sup>1</sup> [a system for correctness]
+
+</div>
+<div class="fragment fade-in-then-semi-out">
+
+**A test (noun)**
+
+* A procedure leading to acceptance or rejection<sup>1</sup> [of a system's correctness]
+
+</div>
+<div class="fragment fade-in-then-semi-out">
+
+**But keep in mind...**
+
+* "Testing only shows the presence, not the absence, of bugs" — Edsger W. Dykstra<sup>2</sup>
+
+</div>
+
 </section>
 <section>
+
+# Why test?
+
+* Our customers and employers pay for software that works correctly.
+* Tests give us confidence that our system works correctly.
+
+</section>
+<section>
+
+# Tests tell us that...
+
+* our system does what it is intended to do,
+* changes have not broken existing functionality,
+* our system can handle edge-cases.
+
+</section>
+</section>
+
+<section>
+<section>
+
+## Varieties of software testing
+
+1. Manual tests (get a person to test)
+2. Automated tests (get the computer to test itself)
+
+<div class="fragment">
+<br />
+
+We want to automate as many tests as possible to save time and money, but it's not possible / practical to automate _everything_.
+
+</div>
+
+</section>
 <section>
 
 ## Types of software testing
