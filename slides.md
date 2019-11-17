@@ -13,6 +13,8 @@ title: Software testing overview - slides
 
 </section>
 
+<!-- Introduction -->
+
 <section>
 <section>
 
@@ -43,6 +45,8 @@ I am an [Acquia Certified Drupal Developer][acquia-cert]
 </section>
 </section>
 
+<!-- About testing. -->
+
 <section>
 <section>
 
@@ -61,9 +65,6 @@ I am an [Acquia Certified Drupal Developer][acquia-cert]
 * our system can handle edge-cases.
 
 </section>
-</section>
-
-<section>
 <section>
 
 ## Dictionary definitions
@@ -91,9 +92,14 @@ A procedure leading to acceptance or rejection<sup>1</sup> [of a system's correc
 </div>
 
 </section>
+</section>
+
+<!-- Classifying tests. -->
+
+<section>
 <section>
 
-## Varieties of software testing
+## Approaches
 
 1. Manual tests (get a person to test)
 2. Automated tests (get the computer to test itself)
@@ -106,11 +112,9 @@ We want to automate as many tests as possible to save time and money, but it's n
 </div>
 
 </section>
-</section>
-<section>
 <section>
 
-## Types of software testing
+## Types
 
 1. Exploratory tests
 2. System tests
@@ -123,9 +127,11 @@ We want to automate as many tests as possible to save time and money, but it's n
 
 Unit ▸ Component ▸ Integration ▸ System ▸ Exploratory
 
+<small>Exploratory tests are a special case, so let's ignore them for a bit.</small>
+
 In an ideal world...
 
-| Unit tests         | Exploratory tests      |
+| Unit tests         | System tests           |
 | ------------------ | ---------------------- |
 | have Small scope   | have Large scope       |
 | are Fast to run    | are Slow to run        |
@@ -138,39 +144,7 @@ In an ideal world...
 </section>
 </section>
 
-
-<section>
-<section>
-
-## Other terms
-
-1. **Regression tests** check that new changes haven't broken old work.
-    * Unit, Component, Integration, and System tests can all act as regression tests.
-    * You probably want to automate as many as you can to avoid a massive, time-consuming stack of manual tests to run after every change.
-2. **Acceptance tests** check that the work meets the requirements of a specification or contract.
-    * Unit, Component, Integration, and System tests can all act as acceptance tests.
-    * These don't have to be automated.
-
-</section>
-<section>
-
-## Other terms (ctd.)
-
-3. **Test Driven Development** (TDD) — write tests *before* writing code to meet those tests
-    * Unit and Component tests (and some System tests) can often be written first as per TDD
-    * Benefits include certainty (that a change didn't break anything), defect reduction, courage (to make changes), documentation (by test), and (better) design<sup>4</sup>
-    * Uncle Bob (Robert C. Martin) says the high cycle time stimulates productivity and reminds him of programming games as a kid<sup>5</sup>
-
-</section>
-<section>
-
-## Other terms (ctd.)
-
-4. **Test suite** — a bunch of tests
-    * Unit, Component, Integration, and System tests could all be in the same suite
-    * You probably only want to run the *whole test suite* (i.e.: every single test) once a day; for smaller tasks, you might want to run a smaller test suite
-5. **Test coverage** — how much of your application has tests to verify its behaviour
-6. 
+<!-- Unit tests. -->
 
 <section>
 <section>
@@ -221,6 +195,7 @@ In an ideal world...
 </section>
 </section>
 
+<!-- Component tests. -->
 
 <section>
 <section>
@@ -254,6 +229,7 @@ In an ideal world...
 </section>
 </section>
 
+<!-- Integration tests. -->
 
 <section>
 <section>
@@ -273,6 +249,9 @@ In an ideal world...
 
 </section>
 </section>
+
+<!-- System tests. -->
+
 <section>
 <section>
 
@@ -295,6 +274,7 @@ In an ideal world...
 </section>
 </section>
 
+<!-- Exploratory tests. -->
 
 <section>
 <section>
@@ -318,6 +298,46 @@ In an ideal world...
 </section>
 </section>
 
+
+<!-- Other terms. -->
+
+<section>
+<section>
+
+## Other terms
+
+1. **Regression tests** check that new changes haven't broken old work.
+    * Unit, Component, Integration, and System tests can all act as regression tests.
+    * You probably want to automate as many as you can to avoid a massive, time-consuming stack of manual tests to run after every change.
+2. **Acceptance tests** check that the work meets the requirements of a specification or contract.
+    * Unit, Component, Integration, and System tests can all act as acceptance tests.
+    * These don't have to be automated.
+
+</section>
+<section>
+
+## Other terms (ctd.)
+
+3. **Test Driven Development** (TDD) — write tests *before* writing code to meet those tests
+    * Unit and Component tests (and some System tests) can often be written first as per TDD
+    * Benefits include certainty (that a change didn't break anything), defect reduction, courage (to make changes), documentation (by test), and (better) design<sup>4</sup>
+    * Uncle Bob (Robert C. Martin) says the high cycle time stimulates productivity and reminds him of programming games as a kid<sup>5</sup>
+
+</section>
+<section>
+
+## Other terms (ctd.)
+
+4. **Test suite** — a bunch of tests
+    * Unit, Component, Integration, and System tests could all be in the same suite
+    * You probably only want to run the *whole test suite* (i.e.: every single test) once a day; for smaller tasks, you might want to run a smaller test suite
+5. **Test coverage** — how much of your application has tests to verify its behaviour
+6. 
+
+</section>
+</section>
+
+<!-- Conclusion. -->
 
 <section>
 
