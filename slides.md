@@ -94,6 +94,38 @@ A procedure leading to acceptance or rejection<sup>1</sup> [of a system's correc
 </section>
 </section>
 
+<!-- Acceptance tests -->
+
+<section>
+<section>
+
+# Acceptance tests
+
+* **What?** tests written by all stakeholders to communicate, clarify, and understand when a requirement is done.<sup>1, 2</sup>
+* **Who**
+    * Business analyists write the "happy path" because this describes business value,<sup>3</sup>
+    * QA analysts write the "unhappy path" because their job is to help think about what can go wrong<sup>3</sup>
+    * Developers provide input into both (what is possible, what else can go wrong)<sup>4</sup>
+* **Synonyms** (term overloaded and overused)
+
+<sup>1</sup> Martin, The Clean Coder, Prentice Hall, 2011. p.100
+<sup>2</sup> Martin, The Clean Coder, Prentice Hall, 2011. p.103
+<sup>3</sup> Martin, The Clean Coder, Prentice Hall, 2011. p.105-106
+
+</section>
+<section>
+
+## Acceptance tests (ctd.)
+
+* **When do I write them?**
+    * Ideally — First few acceptance tests for a feature should be ready by the first day of the sprint
+    * Last chance — All acceptance tests for a feature should be ready by the mid-point of the sprint
+* **When do I run them?**
+    * While implementing the feature
+
+</section>
+</section>
+
 <!-- Classifying tests. -->
 
 <section>
@@ -127,9 +159,7 @@ We want to automate as many tests as possible to save time and money, but it's n
 
 Unit ▸ Component ▸ Integration ▸ System ▸ Exploratory
 
-<small>Exploratory tests are a special case, so let's ignore them for a bit.</small>
-
-In an ideal world...
+<small>Ignoring exploratory tests for a moment...</small>
 
 | Unit tests         | System tests           |
 | ------------------ | ---------------------- |
@@ -151,12 +181,12 @@ In an ideal world...
 
 ## Unit tests
 
-* **What?** highly-isolated, low-level, clear-box tests
-* **Covers?** code paths and edge cases for small units and small group interactions
+* **What?** highly-isolated, low-level, clear-box tests for code; covering code paths and edge cases for small units and small group interactions
 * **Who?** by developer for developer; in language of <abbr title="System Under Test">SUT</abbr>
 * **Synonyms**
     * individual units — (couldn't find any)
     * unit groups — interaction, integration; integration & testing (I&T)
+* **Can be part of** functional, regression testing
 
 </section>
 <section>
@@ -167,7 +197,7 @@ In an ideal world...
     * Ideally — Before writing code
     * Last chance — Before <abbr title="Version Control System">VCS</abbr> commit
 * **When do I run them?**
-    1. Run the ones for the component you're working on as you are developing
+    1. Run the ones for the unit you're working on as you are developing
     2. Run the whole test suite before VCS commit
     3. Run the whole test suite after merging
 
@@ -177,15 +207,16 @@ In an ideal world...
 ### Unit tests (ctd.)
 
 * **Key tech**
-    * PHP — [PHPUnit][phpunit], [php-hamcrest][php-hamcrest]
+    * PHP — [PHPUnit][phpunit], [php-hamcrest][php-hamcrest], [D8 UnitTestCase][d8-unittestcase]
     * JavaScript — [Jest][jest] / [Jasmine][jasmine], [Mocha][mocha], [Ava][ava], [Unexpected][unexpectedjs] (previously QUnit, Unit.js)<sup>6</sup>
 * **How-to/Patterns**:
-    * **Manipulate** parameters and pre-/post-conditions with *fixtures*, and *parameterized tests (PUTs)*
-    * **Verify** output and state changes with *assertions*, and *pattern matchers*
+    * **Manipulate** parameters and pre-/post-conditions with *fixtures* and *parameterized tests (PUTs)*
+    * **Verify** output and state changes with *assertions* and *pattern matchers*
     * **Isolate** with *test doubles* (mocks, stubs, fakes, harnesses)
 
 [phpunit]: https://phpunit.de
 [php-hamcrest]: https://github.com/hamcrest/hamcrest-php
+[d8-unittestcase]: https://www.drupal.org/docs/8/testing/types-of-tests-in-drupal-8#s-unit-tests
 [jest]: https://jestjs.io
 [jasmine]: https://jasmine.github.io
 [mocha]: https://mochajs.org
@@ -202,11 +233,23 @@ In an ideal world...
 
 ## Component tests
 
-* **What?** mid/high-level, grey-box tests
-* **Covers?** happy-path for features and business rules (also obvious corner/alternate paths)
+* **What?** isolated, mid-level, grey-box tests for behavior; covering the happy-path for features and business rules (as well as obvious corner/alternate paths)
 * **Who?** by <abbr title="Quality Assurance">QA</abbr> & business, for business; often in a behavioral <abbr title="Domain Specific Language">DSL</abbr>
-* **When?** Ideally — Before feature is built<br />Last chance — Before merging feature
-* **Synonyms** behaviour, confidence, validation; verification & validation (V&V)
+* **Synonyms** behavior, confidence, validation; verification & validation (V&V)
+* **Can be part of** acceptance, functional, regression
+
+</section>
+<section>
+
+### Component tests (ctd.)
+
+* **When do I write them?**
+    * Ideally — Before starting work on a feature
+    * Last chance — Before passing feature for review or merging
+* **When do I run them?**
+    1. Run the ones for the component you're working on as you are developing
+    2. Run the whole test suite before VCS commit
+    3. Run the whole test suite after merging
 
 </section>
 <section>
@@ -214,15 +257,19 @@ In an ideal world...
 ### Component tests (ctd.)
 
 * **Key tech**
-    * The [Gherkin][gherkin] DSL
-    * PHP — [Behat][behat]
+    * The [Gherkin][gherkin] DSL ("Given/When/Then")
+    * PHP — [Behat][behat], [D7 SimpleTest][d7-simpletest], [D8 kernel tests][d8-kernel]
     * JavaScript — [cucumber-js][cucumberjs], [Chai][chai]<sup>6</sup>
 * **How-to/Patterns**
-    * TODO
+    * Start with a **user story** ("As a/I want to/So that")
+    * Stub **scenario titles** for that user story (success, obvious failure, etc.)
+    * Fill out each scenario (given/when/then) in a **declarative** mode (high-level, low-detail)
+    * Put low-level **details in the feature context**
 
 [gherkin]: https://cucumber.io/docs/gherkin/reference/
-[cucumber]: https://cucumber.io
 [behat]: https://behat.org
+[d7-simpletest]: https://www.drupal.org/docs/7/testing/simpletest-testing-tutorial-drupal-7
+[d8-kernel]: https://www.drupal.org/docs/8/testing/types-of-tests-in-drupal-8#s-kernel-tests
 [cucumberjs]: https://github.com/cucumber/cucumber-js
 [chai]: https://www.chaijs.com
 
@@ -236,16 +283,31 @@ In an ideal world...
 
 ## Integration tests
 
-* **What?** 
-* **Covers?** 
-* **Who?** 
-* **When?** 
-* **Synonyms** 
+* **What?** mid-level, black-box tests for groups of components; covering how they communicate and work together
+    * Only meaningful in larger systems with independent parts (e.g.: headless Drupal, federated search, endpoints beyond the web (<abbr title="Create Once Publish Everywhere">COPE</abbr>))
 
 </section>
 <section>
 
 ### Integration tests (ctd.)
+
+* **Who?** by system architects or lead system designers, for developers; often in same language as component tests
+* **Synonyms** choreography, conformance, plumbing
+* **Can be part of** acceptance, performance, throughput
+* **When do I write them?**
+    * Ideally — before adding another major part
+* **When do I run them?**
+    * Periodically (nightly/weekly) as necessary; i.e.: not with regular CI suite
+
+</section>
+<section>
+
+### Integration tests (ctd.)
+
+* **Key tech**
+    * TODO
+* **How-to/Patterns**
+    * TODO
 
 </section>
 </section>
@@ -257,11 +319,18 @@ In an ideal world...
 
 ## System tests
 
-* **What?** 
-* **Covers?** 
-* **Who?** 
-* **When?** 
-* **Synonyms** 
+* **What?** high-level, black-box tests; covering the whole system
+* **Who?** by system architects or
+* **Synonyms**
+* **Can be part of** acceptance, functional, performance, regression, throughput, validation
+
+</section>
+<section>
+
+### System tests (ctd.)
+
+* **When do I write them?**
+* **When do I run them?**
 
 </section>
 <section>
@@ -269,7 +338,10 @@ In an ideal world...
 ### System tests (ctd.)
 
 * **Key tech**
+    * PHP: [D8 Browser/JS tests][d8-browser]
 * **How-to/Patterns**
+
+[d8-browser]: https://www.drupal.org/docs/8/testing/types-of-tests-in-drupal-8#s-browser-javascript-tests
 
 </section>
 </section>
@@ -281,11 +353,18 @@ In an ideal world...
 
 ## Exploratory tests
 
-* **What?** 
-* **Covers?** 
-* **Who?** 
-* **When?** 
-* **Synonyms** 
+* **What?**
+* **Who?**
+* **Synonyms**
+* **Can be part of**
+
+</section>
+<section>
+
+### Exploratory tests (ctd.)
+
+* **When do I write them?**
+* **When do I run them?**
 
 </section>
 <section>
@@ -297,7 +376,6 @@ In an ideal world...
 
 </section>
 </section>
-
 
 <!-- Other terms. -->
 
@@ -331,8 +409,8 @@ In an ideal world...
 4. **Test suite** — a bunch of tests
     * Unit, Component, Integration, and System tests could all be in the same suite
     * You probably only want to run the *whole test suite* (i.e.: every single test) once a day; for smaller tasks, you might want to run a smaller test suite
-5. **Test coverage** — how much of your application has tests to verify its behaviour
-6. 
+5. **Test coverage** — how much of your application has tests to verify its behavior
+6.
 
 </section>
 </section>
