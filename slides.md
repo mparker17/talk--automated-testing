@@ -166,29 +166,10 @@ We want to automate as many tests as possible to save time and money, but it's n
 
 ### Unit tests (ctd.)
 
-**When do I write them?**
+**Key tech**
 
-* Ideally — Before writing code
-* Last chance — Before <abbr title="Version Control System">VCS</abbr> commit
-
-**When do I run them?**
-
-1. Run the ones for the unit you're working on as you are developing
-2. Run the whole test suite before VCS commit
-3. Run the whole test suite after merging
-
-</section>
-<section data-background="assets/images/2019-11-14--test-automaton-pyramid--unit.svg" data-background-size="25%" data-background-position="top right">
-
-### Unit tests (ctd.)
-
-* **Key tech**
-    * PHP — [PHPUnit][phpunit], [php-hamcrest][php-hamcrest], [D8 UnitTestCase][d8-unittestcase]
-    * JavaScript — [Jest][jest] / [Jasmine][jasmine], [Mocha][mocha], [Ava][ava], [Unexpected][unexpectedjs] (previously QUnit, Unit.js)<sup>6</sup>
-* **How-to/Patterns**:
-    * **Manipulate** parameters and pre-/post-conditions with *fixtures* and *parameterized tests (PUTs)*
-    * **Verify** output and state changes with *assertions* and *pattern matchers*
-    * **Isolate** with *test doubles* (mocks, stubs, fakes, harnesses)
+* PHP — [PHPUnit][phpunit], [php-hamcrest][php-hamcrest], [D8 UnitTestCase][d8-unittestcase]
+* JavaScript — [Jest][jest] / [Jasmine][jasmine], [Mocha][mocha], [Ava][ava], [Unexpected][unexpectedjs] (previously QUnit, Unit.js)<sup>6</sup>
 
 [phpunit]: https://phpunit.de
 [php-hamcrest]: https://github.com/hamcrest/hamcrest-php
@@ -224,21 +205,9 @@ We want to automate as many tests as possible to save time and money, but it's n
 
 ### Acceptance tests (ctd.)
 
-* **When do I write them?**
-    * Ideally — First few acceptance tests for a feature should be ready by the first day of the sprint
-    * Last chance — All acceptance tests for a feature should be ready by the mid-point of the sprint
-* **When do I run them?**
-    * While implementing the feature
+**Key tech**
 
-</section>
-<section data-background="assets/images/2019-11-14--test-automaton-pyramid--acceptance.svg" data-background-size="25%" data-background-position="top right">
-
-### Acceptance tests (ctd.)
-
-* **Key tech**
-    * TODO
-* **How-to/Patterns**:
-    * TODO
+* TODO
 
 </section>
 </section>
@@ -260,16 +229,7 @@ We want to automate as many tests as possible to save time and money, but it's n
 
 ### Exploratory tests (ctd.)
 
-* **When do I write them?**
-* **When do I run them?**
-
-</section>
-<section data-background="assets/images/2019-11-14--test-automaton-pyramid--exploratory.svg" data-background-size="25%" data-background-position="top right">
-
-### Exploratory tests (ctd.)
-
-* **Key tech**
-* **How-to/Patterns**
+**Key tech**
 
 </section>
 </section>
@@ -291,28 +251,11 @@ We want to automate as many tests as possible to save time and money, but it's n
 
 ### Acceptance/Component (ctd.)
 
-* **When do I write them?**
-    * Ideally — Before starting work on a feature
-    * Last chance — Before passing feature for review or merging
-* **When do I run them?**
-    1. Run the ones for the component you're working on as you are developing
-    2. Run the whole test suite before VCS commit
-    3. Run the whole test suite after merging
+**Key tech**
 
-</section>
-<section data-background="assets/images/2019-11-14--test-automaton-pyramid--component.svg" data-background-size="25%" data-background-position="top right">
-
-### Acceptance/Component (ctd.)
-
-* **Key tech**
-    * The [Gherkin][gherkin] DSL ("Given/When/Then")
-    * PHP — [Behat][behat], [D7 SimpleTest][d7-simpletest], [D8 kernel tests][d8-kernel]
-    * JavaScript — [cucumber-js][cucumberjs], [Chai][chai]<sup>6</sup>
-* **How-to/Patterns**
-    * Start with a **user story** ("As a/I want to/So that")
-    * Stub **scenario titles** for that user story (success, obvious failure, etc.)
-    * Fill out each scenario (given/when/then) in a **declarative** mode (high-level, low-detail)
-    * Put low-level **details in the feature context**
+* The [Gherkin][gherkin] DSL ("Given/When/Then")
+* PHP — [Behat][behat], [D7 SimpleTest][d7-simpletest], [D8 kernel tests][d8-kernel]
+* JavaScript — [cucumber-js][cucumberjs], [Chai][chai]<sup>6</sup>
 
 [gherkin]: https://cucumber.io/docs/gherkin/reference/
 [behat]: https://behat.org
@@ -342,20 +285,15 @@ We want to automate as many tests as possible to save time and money, but it's n
 * **Who?** by system architects or lead system designers, for developers; often in same language as component tests
 * **Synonyms** choreography, conformance, plumbing
 * **Can be part of** acceptance, performance, throughput
-* **When do I write them?**
-    * Ideally — before adding another major part
-* **When do I run them?**
-    * Periodically (nightly/weekly) as necessary; i.e.: not with regular CI suite
 
 </section>
 <section data-background="assets/images/2019-11-14--test-automaton-pyramid--integration.svg" data-background-size="25%" data-background-position="top right">
 
 ### Acceptance/Integration (ctd.)
 
-* **Key tech**
-    * TODO
-* **How-to/Patterns**
-    * TODO
+**Key tech**
+
+* TODO
 
 </section>
 </section>
@@ -377,17 +315,9 @@ We want to automate as many tests as possible to save time and money, but it's n
 
 ### Acceptance/System (ctd.)
 
-* **When do I write them?**
-* **When do I run them?**
+**Key tech**
 
-</section>
-<section data-background="assets/images/2019-11-14--test-automaton-pyramid--system.svg" data-background-size="25%" data-background-position="top right">
-
-### Acceptance/System (ctd.)
-
-* **Key tech**
-    * PHP: [D8 Browser/JS tests][d8-browser]
-* **How-to/Patterns**
+* PHP: [D8 Browser/JS tests][d8-browser]
 
 [d8-browser]: https://www.drupal.org/docs/8/testing/types-of-tests-in-drupal-8#s-browser-javascript-tests
 
