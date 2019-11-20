@@ -205,7 +205,7 @@ We want to automate as many tests as possible to save time and money, but it's n
 <!-- Acceptance tests. -->
 
 <section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--acceptance.svg" data-background-size="25%" data-background-position="top right">
 
 ## Acceptance tests
 
@@ -220,7 +220,7 @@ We want to automate as many tests as possible to save time and money, but it's n
 <sup>3</sup> Martin, The Clean Coder, Prentice Hall, 2011. p.105-106
 
 </section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--acceptance.svg" data-background-size="25%" data-background-position="top right">
 
 ### Acceptance tests (ctd.)
 
@@ -231,7 +231,7 @@ We want to automate as many tests as possible to save time and money, but it's n
     * While implementing the feature
 
 </section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--acceptance.svg" data-background-size="25%" data-background-position="top right">
 
 ### Acceptance tests (ctd.)
 
