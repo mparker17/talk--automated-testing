@@ -299,9 +299,23 @@ Only meaningful in larger systems with independent parts (e.g.: headless Drupal,
 
 ### Acceptance/Integration (ctd.)
 
-**Key tech**
+**Key tech**<sup>5</sup>
 
-* TODO
+* Contract conformance: [Janus][janus], [Pact][pact], [Pacto][pacto]
+* Design/simulation: [Apiary][apiary], [API Blueprint][api-blueprint], [Hoverfly][hoverfly], [Swagger][swagger]
+* Simulation/stubbing: [mountebank][mbtest], [inproctester][inproctester], [plasma][plasma], [vcr][vcr]
+
+[apiary]: https://apiary.io
+[api-blueprint]: https://apiblueprint.org
+[hoverfly]: https://hoverfly.io
+[inproctester]: https://github.com/aharin/inproctester
+[janus]: https://github.com/gga/janus
+[mbtest]: http://www.mbtest.org
+[pact]: https://github.com/pact-foundation/pact-ruby
+[pacto]: https://github.com/thoughtworks/pacto
+[plasma]: https://github.com/plasma-dot-net/plasma
+[swagger]: https://swagger.io
+[vcr]: https://github.com/vcr/vcr
 
 </section>
 </section>
@@ -394,6 +408,7 @@ Only meaningful in larger systems with independent parts (e.g.: headless Drupal,
 2. Martin, Clean Architecture, Prentice Hall, 2018. p.26
 3. [Zaidman, An Overview of JavaScript Testing in 2019, WellDone Software / Medium, Feb. 2019.](https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2019-264e19514d0a)
 4. Martin, The Clean Coder, Prentice Hall, 2011. p.100,103,105-106,115-119
+5. [Martin, Testing Strategies in a Microservice Architecture / MartinFowler.com, Nov. 2014](https://martinfowler.com/articles/microservice-testing/)
 
 </section>
 <section>
