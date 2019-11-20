@@ -118,9 +118,9 @@ We want to automate as many tests as possible to save time and money, but it's n
 
 </section>
 <section>
-<img src="assets/images/2019-11-14--test-automaton-pyramid--overview--color.svg" alt="A pyramid with unit tests on the bottom, acceptance tests in the middle, and exploratory tests on the top." style="margin: 0; padding: 0;"/>
+<img src="assets/images/2019-11-14--test-automaton-pyramid--overview.svg" alt="A pyramid with unit tests on the bottom, acceptance tests in the middle, and exploratory tests on the top." style="margin: 0; padding: 0;"/>
 </section>
-<section data-background="assets/images/2019-11-14--test-automaton-pyramid--overview--color.svg" data-background-size="25%" data-background-position="top right">
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--overview.svg" data-background-size="25%" data-background-position="top right">
 
 ### Classifying tests (ctd.)
 
@@ -129,7 +129,7 @@ We want to automate as many tests as possible to save time and money, but it's n
 3. Unit tests
 
 </section>
-<section data-background="assets/images/2019-11-14--test-automaton-pyramid--overview--color.svg" data-background-size="25%" data-background-position="top right">
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--overview.svg" data-background-size="25%" data-background-position="top right">
 
 ### Classifying tests (ctd.)
 
