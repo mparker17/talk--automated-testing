@@ -9,8 +9,8 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="svg12"
-   sodipodi:docname="2019-11-14--test-automaton-pyramid--system.svg"
-   inkscape:version="1.0beta1 (fe3e306, 2019-09-17)"
+   sodipodi:docname="2019-11-14--test-automaton-pyramid--overview--color.svg"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
    width="1363"
    height="994">
   <title
@@ -56,7 +56,36 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs16" />
+     id="defs16">
+    <marker
+       inkscape:stockid="StopL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker5125"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5123"
+         d="M 0.0,5.65 L 0.0,-5.65"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="StopL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="StopL"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1000"
+         d="M 0.0,5.65 L 0.0,-5.65"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.8)" />
+    </marker>
+  </defs>
   <sodipodi:namedview
      lock-margins="true"
      inkscape:showpageshadow="false"
@@ -70,16 +99,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1874"
-     inkscape:window-height="1016"
+     inkscape:window-width="2418"
+     inkscape:window-height="2032"
      id="namedview14"
      showgrid="false"
-     inkscape:zoom="0.35"
-     inkscape:cx="118.57139"
-     inkscape:cy="560"
-     inkscape:window-x="46"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
+     inkscape:zoom="1.2136646"
+     inkscape:cx="456.09778"
+     inkscape:cy="496.19141"
+     inkscape:window-x="1422"
+     inkscape:window-y="54"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg12"
      inkscape:document-rotation="0"
      fit-margin-top="2"
@@ -102,8 +131,14 @@
      inkscape:snap-bbox-midpoints="true"
      inkscape:lockguides="true"
      inkscape:snap-midpoints="true" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#StopL);marker-end:url(#marker5125)"
+     d="M 833.29298,190.43947 1162.6718,778.61606"
+     id="path829"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
   <g
-     id="g4474"
+     id="g4491"
      transform="translate(19.000015,0.40565249)">
     <path
        sodipodi:nodetypes="cccc"
@@ -193,4 +228,18 @@
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;shape-inside:url(#rect944);fill:#000000;fill-opacity:1;stroke:none"
      id="text942"
      xml:space="preserve" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="1031.5471"
+     y="463.37564"
+     id="text5213"><tspan
+       sodipodi:role="line"
+       id="tspan5211"
+       x="1031.5471"
+       y="463.37564">Acceptance</tspan><tspan
+       sodipodi:role="line"
+       x="1031.5471"
+       y="513.37561"
+       id="tspan5215">tests</tspan></text>
 </svg>

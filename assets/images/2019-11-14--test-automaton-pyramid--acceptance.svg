@@ -24,7 +24,7 @@
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
         <dc:title>Test Automation Pyramid - acceptance tests</dc:title>
-        <dc:date> </dc:date>
+        <dc:date>2019-11-14</dc:date>
         <dc:creator>
           <cc:Agent>
             <dc:title>M Parker &lt;mparker17@users.noreply.github.com&gt;</dc:title>
