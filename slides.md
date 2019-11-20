@@ -26,10 +26,6 @@ I work for [Digital Echidna][echidna], [Brady's Meat & Deli][bradysmeats]
 
 <small>(previously [Environment Canada][wsc], [Versabanq][versabanq], [UWaterloo][uwaterloo], [PeaceWorks][peaceworks], [Myplanet][myplanet], [OpenConcept][openconcept])</small>
 
-I am an [Acquia Certified Drupal Developer][acquia-cert]
-
-<small><abbr title="Computer Science">CS</abbr> degree not completed at UWaterloo</small>
-
 [mparker17-github]: https://github.com/mparker17
 [mparker17-gitlab]: https://gitlab.com/mparker17
 [echidna]: https://echidna.ca
@@ -40,7 +36,18 @@ I am an [Acquia Certified Drupal Developer][acquia-cert]
 [peaceworks]: https://peaceworks.ca
 [myplanet]: https://www.myplanet.com
 [openconcept]: https://openconcept.ca
+
+</section>
+<section>
+
+## Who am I? (ctd.)
+
+I am an [Acquia Certified Drupal Developer][acquia-cert]
+
+<small><abbr title="Computer Science">CS</abbr> degree not completed at [UWaterloo][uwaterloo]</small>
+
 [acquia-cert]: https://certification.acquia.com/user/843258
+[uwaterloo]: https://uwaterloo.ca
 
 </section>
 </section>
@@ -69,21 +76,15 @@ I am an [Acquia Certified Drupal Developer][acquia-cert]
 
 ## Dictionary definitions
 
-<div class="fragment fade-in-then-semi-out">
-
 **Testing (verb)**
 
 To evaluate<sup>1</sup> [a system for correctness]
-
-</div>
-<div class="fragment fade-in-then-semi-out">
 
 **A test (noun)**
 
 A procedure leading to acceptance or rejection<sup>1</sup> [of a system's correctness]
 
-</div>
-<div class="fragment fade-in-then-semi-out">
+<div class="fragment">
 
 **But keep in mind...**
 
@@ -94,44 +95,12 @@ A procedure leading to acceptance or rejection<sup>1</sup> [of a system's correc
 </section>
 </section>
 
-<!-- Acceptance tests -->
+<!-- Approaching and classifying tests. -->
 
 <section>
 <section>
 
-# Acceptance tests
-
-* **What?** tests written by all stakeholders to communicate, clarify, and understand when a requirement is done.<sup>1, 2</sup>
-* **Who**
-    * Business analyists write the "happy path" because this describes business value,<sup>3</sup>
-    * QA analysts write the "unhappy path" because their job is to help think about what can go wrong<sup>3</sup>
-    * Developers provide input into both (what is possible, what else can go wrong)<sup>4</sup>
-* **Synonyms** (term overloaded and overused)
-
-<sup>1</sup> Martin, The Clean Coder, Prentice Hall, 2011. p.100
-<sup>2</sup> Martin, The Clean Coder, Prentice Hall, 2011. p.103
-<sup>3</sup> Martin, The Clean Coder, Prentice Hall, 2011. p.105-106
-
-</section>
-<section>
-
-## Acceptance tests (ctd.)
-
-* **When do I write them?**
-    * Ideally — First few acceptance tests for a feature should be ready by the first day of the sprint
-    * Last chance — All acceptance tests for a feature should be ready by the mid-point of the sprint
-* **When do I run them?**
-    * While implementing the feature
-
-</section>
-</section>
-
-<!-- Classifying tests. -->
-
-<section>
-<section>
-
-## Approaches
+## Approaching tests
 
 1. Manual tests (get a person to test)
 2. Automated tests (get the computer to test itself)
@@ -142,26 +111,31 @@ A procedure leading to acceptance or rejection<sup>1</sup> [of a system's correc
 We want to automate as many tests as possible to save time and money, but it's not possible / practical to automate _everything_.
 
 </div>
-
 </section>
 <section>
 
-## Types
+## Classifying tests
+
+</section>
+<section>
+<img src="assets/images/2019-11-14--test-automaton-pyramid--overview--color.svg" alt="A pyramid with unit tests on the bottom, acceptance tests in the middle, and exploratory tests on the top." style="margin: 0; padding: 0;"/>
+</section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--overview--color.svg" data-background-size="25%" data-background-position="top right">
+
+### Classifying tests (ctd.)
 
 1. Exploratory tests
-2. System tests
-3. Integration tests
-4. Component tests
-5. Unit tests
+2. Acceptance tests <small>(broken down into System, Integration, and Component tests)</small>
+3. Unit tests
 
 </section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--overview--color.svg" data-background-size="25%" data-background-position="top right">
 
-Unit ▸ Component ▸ Integration ▸ System ▸ Exploratory
+### Classifying tests (ctd.)
 
 <small>Ignoring exploratory tests for a moment...</small>
 
-| Unit tests         | System tests           |
+| Unit tests         | Acceptance tests       |
 | ------------------ | ---------------------- |
 | have Small scope   | have Large scope       |
 | are Fast to run    | are Slow to run        |
@@ -169,40 +143,42 @@ Unit ▸ Component ▸ Integration ▸ System ▸ Exploratory
 | are Numerous       | are Sparse in number   |
 
 </section>
-<section>
-<img src="assets/images/2019-11-14--test-automaton-pyramid--overview--color.svg" alt="" style="margin: 0; padding: 0;"/>
-</section>
 </section>
 
 <!-- Unit tests. -->
 
 <section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--unit.svg" data-background-size="25%" data-background-position="top right">
 
 ## Unit tests
 
-* **What?** highly-isolated, low-level, clear-box tests for code; covering code paths and edge cases for small units and small group interactions
-* **Who?** by developer for developer; in language of <abbr title="System Under Test">SUT</abbr>
-* **Synonyms**
-    * individual units — (couldn't find any)
-    * unit groups — interaction, integration; integration & testing (I&T)
-* **Can be part of** functional, regression testing
+**What?** highly-isolated, low-level, clear-box tests for code; covering code paths and edge cases for small units and small group interactions
+
+**Who?** by developer for developer; in language of <abbr title="System Under Test">SUT</abbr>
+
+**Synonyms** for individual units — (couldn't find any)
+**Synonyms** for unit groups — interaction, integration; integration & testing (I&T)
+
+**Can be part of** functional, regression testing
 
 </section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--unit.svg" data-background-size="25%" data-background-position="top right">
 
 ### Unit tests (ctd.)
 
-* **When do I write them?**
-    * Ideally — Before writing code
-    * Last chance — Before <abbr title="Version Control System">VCS</abbr> commit
-* **When do I run them?**
-    1. Run the ones for the unit you're working on as you are developing
-    2. Run the whole test suite before VCS commit
-    3. Run the whole test suite after merging
+**When do I write them?**
+
+* Ideally — Before writing code
+* Last chance — Before <abbr title="Version Control System">VCS</abbr> commit
+
+**When do I run them?**
+
+1. Run the ones for the unit you're working on as you are developing
+2. Run the whole test suite before VCS commit
+3. Run the whole test suite after merging
 
 </section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--unit.svg" data-background-size="25%" data-background-position="top right">
 
 ### Unit tests (ctd.)
 
@@ -226,12 +202,84 @@ Unit ▸ Component ▸ Integration ▸ System ▸ Exploratory
 </section>
 </section>
 
+<!-- Acceptance tests. -->
+
+<section>
+<section>
+
+## Acceptance tests
+
+**What?** tests written by all stakeholders to communicate, clarify, and understand when a requirement is done.<sup>1, 2</sup>
+
+**Who** Business analyists write the "happy path" because this describes business value,<sup>3</sup> — QA analysts write the "unhappy path" because their job is to help think about what can go wrong<sup>3</sup> — Developers provide input into both (what is possible, what else can go wrong)<sup>4</sup>
+
+**Synonyms** (term overloaded and overused)
+
+<sup>1</sup> Martin, The Clean Coder, Prentice Hall, 2011. p.100
+<sup>2</sup> Martin, The Clean Coder, Prentice Hall, 2011. p.103
+<sup>3</sup> Martin, The Clean Coder, Prentice Hall, 2011. p.105-106
+
+</section>
+<section>
+
+### Acceptance tests (ctd.)
+
+* **When do I write them?**
+    * Ideally — First few acceptance tests for a feature should be ready by the first day of the sprint
+    * Last chance — All acceptance tests for a feature should be ready by the mid-point of the sprint
+* **When do I run them?**
+    * While implementing the feature
+
+</section>
+<section>
+
+### Acceptance tests (ctd.)
+
+* **Key tech**
+    * TODO
+* **How-to/Patterns**:
+    * TODO
+
+</section>
+</section>
+
+<!-- Exploratory tests. -->
+
+<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--exploratory.svg" data-background-size="25%" data-background-position="top right">
+
+## Exploratory tests
+
+* **What?**
+* **Who?**
+* **Synonyms**
+* **Can be part of**
+
+</section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--exploratory.svg" data-background-size="25%" data-background-position="top right">
+
+### Exploratory tests (ctd.)
+
+* **When do I write them?**
+* **When do I run them?**
+
+</section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--exploratory.svg" data-background-size="25%" data-background-position="top right">
+
+### Exploratory tests (ctd.)
+
+* **Key tech**
+* **How-to/Patterns**
+
+</section>
+</section>
+
 <!-- Component tests. -->
 
 <section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--component.svg" data-background-size="25%" data-background-position="top right">
 
-## Component tests
+## Acceptance/Component
 
 * **What?** isolated, mid-level, grey-box tests for behavior; covering the happy-path for features and business rules (as well as obvious corner/alternate paths)
 * **Who?** by <abbr title="Quality Assurance">QA</abbr> & business, for business; often in a behavioral <abbr title="Domain Specific Language">DSL</abbr>
@@ -239,9 +287,9 @@ Unit ▸ Component ▸ Integration ▸ System ▸ Exploratory
 * **Can be part of** acceptance, functional, regression
 
 </section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--component.svg" data-background-size="25%" data-background-position="top right">
 
-### Component tests (ctd.)
+### Acceptance/Component (ctd.)
 
 * **When do I write them?**
     * Ideally — Before starting work on a feature
@@ -252,9 +300,9 @@ Unit ▸ Component ▸ Integration ▸ System ▸ Exploratory
     3. Run the whole test suite after merging
 
 </section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--component.svg" data-background-size="25%" data-background-position="top right">
 
-### Component tests (ctd.)
+### Acceptance/Component (ctd.)
 
 * **Key tech**
     * The [Gherkin][gherkin] DSL ("Given/When/Then")
@@ -279,17 +327,17 @@ Unit ▸ Component ▸ Integration ▸ System ▸ Exploratory
 <!-- Integration tests. -->
 
 <section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--integration.svg" data-background-size="25%" data-background-position="top right">
 
-## Integration tests
+## Acceptance/Integration
 
 * **What?** mid-level, black-box tests for groups of components; covering how they communicate and work together
     * Only meaningful in larger systems with independent parts (e.g.: headless Drupal, federated search, endpoints beyond the web (<abbr title="Create Once Publish Everywhere">COPE</abbr>))
 
 </section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--integration.svg" data-background-size="25%" data-background-position="top right">
 
-### Integration tests (ctd.)
+### Acceptance/Integration (ctd.)
 
 * **Who?** by system architects or lead system designers, for developers; often in same language as component tests
 * **Synonyms** choreography, conformance, plumbing
@@ -300,9 +348,9 @@ Unit ▸ Component ▸ Integration ▸ System ▸ Exploratory
     * Periodically (nightly/weekly) as necessary; i.e.: not with regular CI suite
 
 </section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--integration.svg" data-background-size="25%" data-background-position="top right">
 
-### Integration tests (ctd.)
+### Acceptance/Integration (ctd.)
 
 * **Key tech**
     * TODO
@@ -315,9 +363,9 @@ Unit ▸ Component ▸ Integration ▸ System ▸ Exploratory
 <!-- System tests. -->
 
 <section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--system.svg" data-background-size="25%" data-background-position="top right">
 
-## System tests
+## Acceptance/System
 
 * **What?** high-level, black-box tests; covering the whole system
 * **Who?** by system architects or
@@ -325,92 +373,23 @@ Unit ▸ Component ▸ Integration ▸ System ▸ Exploratory
 * **Can be part of** acceptance, functional, performance, regression, throughput, validation
 
 </section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--system.svg" data-background-size="25%" data-background-position="top right">
 
-### System tests (ctd.)
+### Acceptance/System (ctd.)
 
 * **When do I write them?**
 * **When do I run them?**
 
 </section>
-<section>
+<section data-background="assets/images/2019-11-14--test-automaton-pyramid--system.svg" data-background-size="25%" data-background-position="top right">
 
-### System tests (ctd.)
+### Acceptance/System (ctd.)
 
 * **Key tech**
     * PHP: [D8 Browser/JS tests][d8-browser]
 * **How-to/Patterns**
 
 [d8-browser]: https://www.drupal.org/docs/8/testing/types-of-tests-in-drupal-8#s-browser-javascript-tests
-
-</section>
-</section>
-
-<!-- Exploratory tests. -->
-
-<section>
-<section>
-
-## Exploratory tests
-
-* **What?**
-* **Who?**
-* **Synonyms**
-* **Can be part of**
-
-</section>
-<section>
-
-### Exploratory tests (ctd.)
-
-* **When do I write them?**
-* **When do I run them?**
-
-</section>
-<section>
-
-### Exploratory tests (ctd.)
-
-* **Key tech**
-* **How-to/Patterns**
-
-</section>
-</section>
-
-<!-- Other terms. -->
-
-<section>
-<section>
-
-## Other terms
-
-1. **Regression tests** check that new changes haven't broken old work.
-    * Unit, Component, Integration, and System tests can all act as regression tests.
-    * You probably want to automate as many as you can to avoid a massive, time-consuming stack of manual tests to run after every change.
-2. **Acceptance tests** check that the work meets the requirements of a specification or contract.
-    * Unit, Component, Integration, and System tests can all act as acceptance tests.
-    * These don't have to be automated.
-
-</section>
-<section>
-
-## Other terms (ctd.)
-
-3. **Test Driven Development** (TDD) — write tests *before* writing code to meet those tests
-    * Unit and Component tests (and some System tests) can often be written first as per TDD
-    * Benefits include certainty (that a change didn't break anything), defect reduction, courage (to make changes), documentation (by test), and (better) design<sup>4</sup>
-    * Uncle Bob (Robert C. Martin) says the high cycle time stimulates productivity and reminds him of programming games as a kid<sup>5</sup>
-
-</section>
-<section>
-
-## Other terms (ctd.)
-
-4. **Test suite** — a bunch of tests
-    * Unit, Component, Integration, and System tests could all be in the same suite
-    * You probably only want to run the *whole test suite* (i.e.: every single test) once a day; for smaller tasks, you might want to run a smaller test suite
-5. **Test coverage** — how much of your application has tests to verify its behavior
-6.
 
 </section>
 </section>
