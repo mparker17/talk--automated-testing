@@ -249,7 +249,7 @@ We want to automate as many tests as possible to save time and money, but it's n
 
 **Synonyms** behavior/behavioral, confidence, validation; verification & validation (V&V)
 
-**Can be part of** functional, regression
+**Part of/covers** functional, regression
 
 </section>
 <section data-background="assets/images/2019-11-14--test-automaton-pyramid--component.svg" data-background-size="25%" data-background-position="top right">
@@ -295,7 +295,7 @@ Only meaningful in larger systems with independent parts (e.g.: headless Drupal,
 
 **Synonyms** contract, choreography, conformance, plumbing; integration and testing (I&T)
 
-**Can be part of** performance, throughput
+**Part of/covers** performance, throughput
 
 </section>
 <section data-background="assets/images/2019-11-14--test-automaton-pyramid--integration.svg" data-background-size="25%" data-background-position="top right">
@@ -334,11 +334,11 @@ Only meaningful in larger systems with independent parts (e.g.: headless Drupal,
 
 **What?** high-level, black-box tests; covering the whole system
 
-**Who?** by system architects or
+**Who?** by system architects, lead designers, developers, QA
 
 **Synonyms** end-to-end (E2E) testing
 
-**Can be part of** accessibility, functional, load, performance, regression, throughput, user acceptance (alpha-testing, beta-testing), verification, validation testing; Independent Verification & Validation (ISVV)
+**Part of/covers** accessibility, functional, load, performance, regression, throughput, user acceptance (alpha-testing, beta-testing), verification, validation testing; Independent Verification & Validation (ISVV)
 
 </section>
 <section data-background="assets/images/2019-11-14--test-automaton-pyramid--system.svg" data-background-size="25%" data-background-position="top right">
@@ -348,7 +348,7 @@ Only meaningful in larger systems with independent parts (e.g.: headless Drupal,
 **Key tech**
 
 * [D7 SimpleTest][d7-simpletest], [D8 kernel tests][d8-kernel], [D8 Browser/JS tests][d8-browser], [Nightwatch][nightwatch], [Selenium][selenium], [Wraith][wraith]
-* Accessibility: [AChecker]achecker, [deque axe][axe], [WAVE toolbar][wave-toolbar]
+* Accessibility: [AChecker][achecker], [deque axe][axe], [WAVE toolbar][wave-toolbar]
 * Load/performance/throughput: Capybara, Flood.io, Locust(?), [Valgrind][valgrind], [webprofiler][webprofiler]
 * Security: Jtest, Metasploit, Parasoft, ZMap
 
@@ -374,16 +374,17 @@ Only meaningful in larger systems with independent parts (e.g.: headless Drupal,
 **Continuous delivery (CD)** — the practice of releasing people's work several times per day
 
 **Continuous Integration (CI)** — the practice of merging multiple people's work together several times per day
-    * *CI tools* or *CI/CD tools* often refer to automated programs (*task runners*) that run tests and merge automatically (e.g.: Hudson/Jenkins, CircleCI, TravisCI, etc.)
+
+* *CI tools* or *CI/CD tools* often refer to automated programs (*task runners*) that run tests and merge automatically (e.g.: Hudson/Jenkins, CircleCI, TravisCI, etc.)
 
 **Regression tests** — a check that new changes haven't broken old work
-
-**Sanity tests** — a check of a program's logic/flow; or whether further testing is needed
 
 </section>
 <section>
 
 ### Other terms (ctd.)
+
+**Sanity tests** — a check of a program's logic/flow; or whether further testing is needed
 
 **Smoke tests** — a check for obvious failure
 
@@ -418,7 +419,8 @@ Only meaningful in larger systems with independent parts (e.g.: headless Drupal,
 
 ## Thanks!
 
-* [Digital Echidna][echidna] for letting me work on this presentation during work hours
+* [Digital Echidna][echidna], for letting me work on this presentation during work hours
+* [OpenConcept][openconcept], for who paid me to write a blog post on software testing a few years ago
 * [@alberto56][alberto56-drupalorg], [@Mirabuck][mirabuck-drupalorg] for walking me through TDD in Drupal while at [the Linux Foundation][linux-foundation]
 
 [alberto56-drupalorg]: https://www.drupal.org/u/alberto56
