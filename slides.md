@@ -29,6 +29,7 @@ title: Software testing overview - slides
 I work for [Digital Echidna][echidna], [Brady's Meat & Deli][bradysmeats]
 
 ![Digital Echidna's logo](assets/images/2019-11-20--sponsor--digital-echidna.svg)
+![Brady's Meat & Deli's logo](assets/images/2019-11-20--sponsor--bradysmeats.svg)
 
 <small>(previously [Environment Canada][wsc], [Versabanq][versabanq], [UWaterloo][uwaterloo], [PeaceWorks][peaceworks], [Myplanet][myplanet], [OpenConcept][openconcept])</small>
 
