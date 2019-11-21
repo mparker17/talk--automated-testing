@@ -99,12 +99,12 @@ Speaker notes
 4. And we sub-divide acceptance tests into Component tests, Integration tests, and System tests.
 5. ¤
 
-# 10/26 - Classifying tests (ctd.)
+## 10/26 - Classifying tests (ctd.)
 
 1. We will go over all these terms and their synonyms in a bit.
 2. ¤
 
-# 11/26 - Classifying tests (ctd.)
+## 11/26 - Classifying tests (ctd.)
 
 1. Why a pyramid?
 2. It serves to illustrate that we can/should build a testing system...
