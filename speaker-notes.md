@@ -1,5 +1,6 @@
 ---
 title: Software testing overview - speaker notes
+layout: static
 ---
 
 <section>
