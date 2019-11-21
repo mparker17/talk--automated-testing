@@ -3,7 +3,7 @@ title: Software testing overview - slides
 ---
 
 <section>
-<section>
+<section data-background="assets/images/2019-11-20--canonical-site--qr.png" data-background-size="123px" data-background-position="bottom left">
 
 # Software testing overview
 — with [mparker17][mparker17-drupalorg]
